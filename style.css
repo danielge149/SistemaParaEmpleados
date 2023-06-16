@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(13, 14, 14);
+}
+.grande{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3%;
+    border: 2px solid black;
+    background-color: aqua;
+
+}
+.titulo{
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+.salario{
+    text-align: center;
+}
+.borde{
+    border: 2px solid black;
+    border-radius: 5%;
+    margin: 1%;
+    background-color: rgb(162, 236, 236);
+
+}

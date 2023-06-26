@@ -28,68 +28,71 @@
       <div class="borde">
         Datos personales 
         <div style="margin-left: 0%;"class="row">
-        <div class="col-4"
+        <div class="col-4">
           <label for="Nombre1">Nombre</label><br>
           <label for="Nombre1">Apellido</label><br>
           <label for="Nombre1">Sexo</label><br>
           <label for="Nombre1">Fecha Nacimiento </label><br>
           <label for="Nombre1">Fecha ingreso </label>
+          
         </div>
         <div class="col-4">
           <input type="text">
           <input type="text">
-          <input type="text">
-          <input type="date">
-          <input type="date">
+          <select id="sexo" name="sexo">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+          </select>
+          <input type="date" id="fechana">
+          <input type="date" id="fechaing">
           
         </div>
         <div class="col-4">
           <img src="img/perfil.png" width="150" height="150">
           
         </div>
- 
-        </div>
       </div>
+      </div>
+      
       <div class="borde">
         Salario <br>
         <div class="salario">
           <label for="salario">Salario</label>
           <input type="text">
-          <button>Modificar</button>
+          <button onclick="comprando_galleta()" 
+                id="comprarGalleta" class="btn btn-info">Actualizar</button>
         </div>
 
       </div>
       <div class="borde" >
         Calculos  <br>
-        <div style="margin-left: 20%;" class="row">
-        <div class="col-4">
-          <button>Calcular edad </button><br>
-          <button>Calcular antiguedad</button><br>
-          <button>Calcular pretaciones</button><br>
+        
+        <div class="centrar">
+          <button onclick="comprando_galleta()" 
+                id="comprarGalleta" class="btn btn-info">Calcular Edad</button>     
+          <button onclick="abastacer_galleta()" 
+                id="abastercerGalleta" class="btn btn-info">Calcular Antiguedad</button>
+          <button onclick="comprando_galleta()" 
+                id="comprarGalleta" class="btn btn-info">Calcular Prestaciones</button> 
         </div>
-        <div class="col-6">
-          <input type="text">
-          <input type="text">
-          <input type="text">
       </div>
-    </div>
-  </div>
+ 
       <div class="borde">
         Puntos de Extension <br>
-        <div class="salario">
-          <button>Opcion 1</button>
-          <button>opcion 2</button>
+        <div class="puntos">
+          <button onclick="comprando_galleta()" 
+                id="comprarGalleta" class="btn btn-info">Opción 1</button>
+          <button onclick="comprando_galleta()" 
+                id="comprarGalleta" class="btn btn-info">Opción 2</button>
         </div>
-      </div>  
-
-      
-
-       
+      </div> 
     </div>
     
 
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
   </body>

@@ -14,12 +14,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.19.2/dist/css/mdb.min.css" integrity="sha384-lAx7q8EdrzHoHZjvBd2sx3PjN/CGGDALIUpkRMmMm8S5q6qHygIaExJROx4rGDR2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/mdb@4.19.2/dist/js/mdb.min.js" integrity="sha384-L81uBH4ZpjLrL87tjz5BMzHg+yAwQJxE4evVg4oeb1I6kif/0O1S5Uft0SZt01Ko" crossorigin="anonymous"></script>
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+
+      
     />
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
+    
+    
   </head>
   <body>
 
@@ -80,19 +87,107 @@
         </div>
       </div>
  
-      <div class="borde">
-        Puntos de Extension <br>
-        <div class="puntos">
-          <a class="btn btn-info" href="formulario.html">Contacto</a>
-          <a class="btn btn-info" href="formulario.html">Codigo</a>
+     
+
+      <div class="titulo">INFORMACION CONTACTO </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" required>
         </div>
-      </div> 
+    
+        <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono:</label>
+            <input type="tel" class="form-control" id="telefono" required>
+        </div>
+    
+        <div class="mb-3">
+            <label for="direccion" class="form-label">Dirección:</label>
+            <input type="text" class="form-control" id="direccion" required>
+        </div>
+        <div class="mb-3">
+            <label for="ciudad" class="form-label">Ciudad:</label>
+            <input type="text" class="form-control" id="ciudad">
+        </div>
+       
+        <!-- Botón para abrir la ventana modal -->
+        <div class="centrar">
+        <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal" onclick="mostrar_datos()">
+          Visualizar
+        </button>
+        </div>
+
+        <!-- Ventana modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Datos Empleados</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <table class="table">
+                  <tr>
+                    <th>Nombre</th>
+                    <td id="nom"></td>
+                  </tr>
+                  <tr>
+                    <th>Apellido</th>
+                    <td id="ape"></td>
+                  </tr>
+                  <tr>
+                    <th>Sexo</th>
+                    <td id="sex"></td>
+                  </tr>
+                  <tr>
+                    <th>Fecha de nacimiento</th>
+                    <td id="fechana1"></td>
+                  </tr>
+                  <tr>
+                    <th>Fecha ingreso</th>
+                    <td id="fechaing1"></td>
+                  </tr>
+                  <tr>
+                    <th>Salario básico</th>
+                    <td id="sal"></td>
+                  </tr>
+                  <tr>
+                    <th>Email</th>
+                    <td id="emal"></td>
+                  </tr>
+                  <tr>
+                    <th>Teléfono</th>
+                    <td id="tel"></td>
+                  </tr>
+                  <tr>
+                    <th>Dirección</th>
+                    <td id="dir"></td>
+                  </tr>
+                  <tr>
+                    <th>Ciudad</th>
+                    <td id="ciu"></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- Incluir los archivos de MDBootstrap -->
+
+
+
     </div>
     
 
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script type="text/javascript" src="js/funciones.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdb@4.19.2/dist/css/mdb.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mdb@4.19.2/dist/js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
   </body>

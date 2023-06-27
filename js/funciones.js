@@ -129,13 +129,13 @@ function calcular_prestaciones() {
     
   }
 function mostrar_datos() {
-    document.getElementById("nomMos").innerHTML = p.toStringNombre();
-    document.getElementById("apeMos").innerHTML = p.toStringApellido();
+    document.getElementById("nom").innerHTML = p.toStringNombre();
+    document.getElementById("ape").innerHTML = p.toStringApellido();
     document.getElementById("sex").innerHTML = p.toStringSexo();
     document.getElementById("fechana1").innerHTML = p.toStringFechaNac();
     document.getElementById("fechaing1").innerHTML = p.toStringFechaIng();
     document.getElementById("sal").innerHTML = p.toStringSalario();
-    document.getElementById("email").innerHTML = p.toStringEmail();
+    document.getElementById("emal").innerHTML = p.toStringEmail();
     document.getElementById("tel").innerHTML = p.toStringTelefono();
     document.getElementById("dir").innerHTML = p.toStringDireccion();
     document.getElementById("ciu").innerHTML = p.toStringCiudad();

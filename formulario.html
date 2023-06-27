@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+  </head>
+  <body>
+    <div class="grande" >
+        <div class="titulo">INFORMACION CONTACTO </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+    
+        <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono:</label>
+            <input type="tel" class="form-control" id="telefono" required>
+        </div>
+    
+        <div class="mb-3">
+            <label for="direccion" class="form-label">Dirección:</label>
+            <input type="text" class="form-control" id="direccion" required>
+        </div>
+        <div class="mb-3">
+            <label for="ciudad" class="form-label">Ciudad:</label>
+            <input type="text" class="form-control" id="ciudad">
+        </div>
+        <div class="centrar">
+            <button onclick="mostrar_datos()" 
+                  id="calcularEdad" class="btn btn-info" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">Visualizar</button>     
+        </div>
+
+
+            
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel ">Informacion del empleado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="verInfo">
+                <table class="table">
+                    <tr>
+                    <th>
+
+                        <div class="mb-3">
+
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Sexo</th>
+                                <th scope="col">Fecha de nacimiento</th>
+                                <th scope="col">Fecha ingreso</th>
+                                <th scope="col">Salario basico</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Telefono</th>
+                                <th scope="col">Direccion</th>
+                                <th scope="col">Ciudad</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td id="nom"></td>
+                                <td id="ape"></td>
+                                <td id="sex"></td>
+                                <td id="fechana1"></td>
+                                <td id="fechaing1"></td>
+                                <td id="sal"></td>
+                                <td id="email"></td>
+                                <td id="tel"></td>
+                                <td id="dir"></td>
+                                <td id="ciu"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+        
+    
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/funciones.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+</html>

@@ -114,18 +114,38 @@ function modificar(){
 
 function calcular_edad() {
     let Edad = p.calcularEdad();
-    alert(Edad)
+   
+    if(!Edad){
+    alert("NO HA INGRESADO NINGUN VALOR O EL VALOR INGRESADO  NO ES VALIDO")
+    }
+    else{
+        alert("Su edad es " + Edad + " años")
+    }
 }
 
 function calcular_tiempo() {
     let Edad = p.calcularTiempo();
-    alert(Edad)
+    if(!Edad){
+        alert("NO HA INGRESADO NINGUN VALOR O EL VALOR INGRESADO  NO ES VALIDO")
+        }
+        else{
+            alert("Su tiempo es " + Edad + " años")
+        }
+
 }
 function calcular_prestaciones() {
      let tiempo= p.calcularTiempo()
      let salario= p.toStringSalario()
-     let prestacion =(tiempo*salario)/12
-      alert(prestacion.toFixed(2));
+     
+      
+    if(!tiempo || !salario || salario<0){
+        alert("NO HA INGRESADO NINGUN VALOR O EL VALOR INGRESADO  NO ES VALIDO")
+    }
+    else{
+        let prestacion =(tiempo*salario)/12
+        alert("El valor de sus prestaciones es :" + prestacion.toFixed(2));
+    }
+
     
   }
 function mostrar_datos() {
@@ -141,3 +161,25 @@ function mostrar_datos() {
     document.getElementById("ciu").innerHTML = p.toStringCiudad();
        
 }
+
+var seleccionarImagen = document.getElementById("seleccionarImagen");
+var imagenPreview = document.getElementById("imagenPreview");
+
+seleccionarImagen.addEventListener("click", function() {
+  var input = document.createElement("input");
+  input.type = "file";
+  input.accept = "image/*";
+  
+  input.addEventListener("change", function(event) {
+    var archivo = event.target.files[0];
+    var lector = new FileReader();
+
+    lector.onload = function(e) {
+      imagenPreview.src = e.target.result;
+    };
+
+    lector.readAsDataURL(archivo);
+  });
+
+  input.click();
+});

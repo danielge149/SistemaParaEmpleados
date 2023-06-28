@@ -31,9 +31,9 @@
   <body>
 
     <div class="grande" >
-      <div class="titulo">SISTEMA DE EMPLEADOS </div>
+      <div class="titulo" style="font-family: Georgia, 'Times New Roman', Times, serif;">SISTEMA DE EMPLEADOS </div>
       <div class="borde">
-        Datos personales 
+        <h5 style="margin-left: 2%; font-family: Georgia, 'Times New Roman', Times, serif;">Datos personales </h5>
         <div style="margin-left: 0%;"class="row">
         <div class="col-4">
           <label for="nombre" >Nombre</label><br>
@@ -51,22 +51,26 @@
             <option value="femenino">Femenino</option>
             <option value="otro">Otro</option>
           </select>
+          <br>
           <input type="date" id="fechana" name="fechana">
+          <br>
           <input type="date" id="fechaing" name="fechaing">
           
         </div>
         <div class="col-4">
-          <img src="img/perfil.png" width="150" height="150">
+
+          <img class="foto" id="imagenPreview" src="#" >
+          <button class="botonfoto"  id="seleccionarImagen">Agregar Foto</button>
           
         </div>
       </div>
       </div>
       
       <div class="borde">
-        Salario <br>
+        <h5 class="tituformu" >Salario </h5><br>
         <div class="salario">
           <label for="salario">Salario</label>
-          <input type="text"  id="salario" name="salario">
+          <input min="0" type="number" style="border: none;" id="salario" name="salario">
           <button onclick="modificar()" 
                 id="modificar" class="btn btn-info">Modificar</button>
              
@@ -75,7 +79,7 @@
 
       </div>
       <div class="borde" >
-        Calculos  <br>
+        <h5 class="tituformu">Calculos</h5>  <br>
         
         <div class="centrar">
           <button onclick="calcular_edad()" 
@@ -89,42 +93,44 @@
  
      
 
-      <div class="titulo">INFORMACION CONTACTO </div>
+      <div class="titulo" style="font-family: Georgia, 'Times New Roman', Times, serif;">INFORMACION CONTACTO </div>
+    <div class="borde">
         <div class="mb-3">
-            <label for="email" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="email" required>
+            <label class="tituformu" for="email" class="form-label">&nbsp; Email:</label> <br>
+            <input class="inputtamaño" type="email" class="form-control" id="email" required>
         </div>
     
         <div class="mb-3">
-            <label for="telefono" class="form-label">Teléfono:</label>
-            <input type="tel" class="form-control" id="telefono" required>
+            <label class="tituformu" for="telefono" class="form-label">Teléfono:</label> <br>
+            <input class="inputtamaño" type="number" class="form-control" id="telefono" required>
         </div>
     
         <div class="mb-3">
-            <label for="direccion" class="form-label">Dirección:</label>
-            <input type="text" class="form-control" id="direccion" required>
+            <label class="tituformu" for="direccion" class="form-label">Dirección:</label> <br>
+            <input class="inputtamaño" type="text" class="form-control" id="direccion" required>
         </div>
         <div class="mb-3">
-            <label for="ciudad" class="form-label">Ciudad:</label>
-            <input type="text" class="form-control" id="ciudad">
+            <label class="tituformu" for="ciudad" class="form-label">Ciudad:</label> <br>
+            <input class="inputtamaño" type="text" class="form-control" id="ciudad">
         </div>
        
         <!-- Botón para abrir la ventana modal -->
         <div class="centrar">
-        <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal" onclick="mostrar_datos()">
+        <button type="button" class="botonfoto" data-mdb-toggle="modal" data-mdb-target="#exampleModal" onclick="mostrar_datos()">
           Visualizar
         </button>
         </div>
+      </div>
 
         <!-- Ventana modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
+              <div class="modal-header" id="datoe">
                 <h5 class="modal-title" id="exampleModalLabel">Datos Empleados</h5>
                 <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
+              <div class="modal-body; estilomodal">
                 <table class="table">
                   <tr>
                     <th>Nombre</th>
@@ -168,7 +174,7 @@
                   </tr>
                 </table>
               </div>
-              <div class="modal-footer">
+              <div class="modal-footer" id="datoe">
                 <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Cerrar</button>
                 
               </div>

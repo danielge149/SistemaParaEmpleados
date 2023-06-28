@@ -67,7 +67,6 @@ input{
 .inputtamaño{
     width: 400px;
     height: 30px;
-
     border-radius: 10px;
     margin-left: 2%;
 
@@ -88,4 +87,38 @@ th,td{
 }
 #datoe{
     background-color: rgb(144, 207, 241);
+}
+.tituadivinador{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 5%;
+}
+.botonjugar{
+    background-color: rgb(104, 152, 241);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 5%;
+    margin-left: 33%;
+}
+.botongenerar{
+    background-color: rgb(104, 152, 241);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 5%;
+    
 }

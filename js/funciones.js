@@ -7,7 +7,7 @@ var fechaActual1 = new Date().toISOString().split('T')[0];
 fechaInput1.setAttribute('max', fechaActual1);
 
 class Persona{
-    constructor(Nombre, Apellido, Sexo, FechaNac, FechaIngr, Salario, Email, Telefono, Direccion, Ciudad) {
+    constructor(Nombre, Nombre2, Apellido, Sexo, FechaNac, FechaIngr, Salario, Email, Telefono, Direccion, Ciudad) {
         this.Nombre = Nombre;
         this.Apellido = Apellido;
         this.Sexo = Sexo;
@@ -18,6 +18,7 @@ class Persona{
         this.Telefono = Telefono;
         this.Direccion = Direccion;
         this.Ciudad = Ciudad;
+        this.Nombre2 = Nombre2;
     }
     toStringNombre() {
         return (this.Nombre = document.getElementById("nombre").value);
@@ -58,6 +59,9 @@ class Persona{
     }
     toStringCiudad() {
         return (this.Nombre = document.getElementById("ciudad").value);
+    }
+    toStringNombre2(){
+        return (this.Nombre2 = document.getElementById("nombre2").value);
     }
 
     calcularEdad() {
@@ -183,3 +187,55 @@ seleccionarImagen.addEventListener("click", function() {
 
   input.click();
 });
+
+
+let numeroaleatorio;
+let contador = 0;
+
+
+function generarnumeroaleatorio(){
+    // Generar un número aleatorio entre 1 y 10
+    numeroaleatorio = Math.floor(Math.random() * 10) + 1;
+}
+
+function reiniciarjuego(){
+    generarnumeroaleatorio();
+    contador = 0;
+}
+
+function adivinarNumero() {
+    document.getElementById("nom2").innerHTML = p.toStringNombre2();
+
+    // Obtener el número ingresado por el usuario
+    let numero = parseInt(document.getElementById("numero").value);
+
+
+    // Comparar el número ingresado con el número aleatorio
+    if (numero === numeroaleatorio) {
+      document.getElementById("resultado").innerHTML = "¡Adivinaste! El número era " + numeroaleatorio + ".";
+      alert('Lo lograste en ---> '+ contador + ' <--- intentos ')
+      
+    } 
+    else if (numero > numeroaleatorio){
+      document.getElementById("resultado").innerHTML = "Intenta con un numero mas bajo ";
+      contador ++;
+    }
+
+    else if (numero < numeroaleatorio){
+        document.getElementById("resultado").innerHTML = "Intenta con un numero mas alto ";
+        contador ++;
+    }
+    
+  } 
+
+  function jugar(){
+
+    generarnumeroaleatorio();
+    adivinarNumero();
+    reiniciarjuego();
+
+  }
+    
+
+
+  

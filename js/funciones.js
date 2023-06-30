@@ -166,6 +166,45 @@ function mostrar_datos() {
        
 }
 
+var arreglo = [];
+
+function guardar_arreglo(){
+    
+  var dato1 = p.toStringNombre();
+  var dato2 = p.toStringApellido();
+  var dato3 = p.toStringSexo();
+  var dato4 = p.toStringFechaNac();
+  var dato5 = p.toStringFechaIng();
+  var dato6 = p.toStringSalario();
+  var dato7 = p.toStringEmail();
+  var dato8 = p.toStringTelefono();
+  var dato9 = p.toStringDireccion();
+  var dato10 = p.toStringCiudad();
+  
+  arreglo.push(dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8, dato9, dato10);
+
+  document.getElementById("nombre").value = "";
+  document.getElementById("apellido").value = "";
+  document.getElementById("sexo").value = "";
+  document.getElementById("fechana").value = "";
+  document.getElementById("fechaing").value = "";
+  document.getElementById("salario").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("telefono").value = "";
+  document.getElementById("direccion").value = "";
+  document.getElementById("ciudad").value = "";
+
+
+  if(dato1=="" || dato2=="" || dato3=="" || dato4=="" || dato5=="" || !dato6
+  || dato7=="" || dato8=="" || dato9=="" || dato10==""){
+    alert("ALGUN CAMPO VACIOS")
+  }
+  else{
+    alert("Los datos son: [" + arreglo.join(", ") + "]");
+  }
+  arreglo = [];
+}
+
 var seleccionarImagen = document.getElementById("seleccionarImagen");
 var imagenPreview = document.getElementById("imagenPreview");
 
